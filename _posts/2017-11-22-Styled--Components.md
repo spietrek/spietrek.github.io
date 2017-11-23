@@ -1,9 +1,9 @@
 ---
 layout: post
-title: Introduction to Styled-Components
+title: Introduction to styled-components
 ---
 
-![Styled Components Evolution](../images/styled-components-evolution.png "Styled Components Evolution")
+![styled-components Evolution](../images/styled-components-evolution.png "styled-components Evolution")
 
 CSS has been the ugly step-sister of the development world. Many developers say: "I'm a developer, I don't care about how things look.". They don't care to learn CSS. They should. Developers should learn CSS to know how an application should be styled and provide responsive support. One caveat: CSS is hard. It can take years to be proficient. 
 
