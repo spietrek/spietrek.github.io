@@ -5,7 +5,7 @@ title: Introduction to Styled-Components
 
 ![Styled Components Evolution](../images/styled-components-evolution.png "Styled Components Evolution")
 
-CSS has been the ugly step-sister of the development world. Many developers say: "I'm a developer, I don't care about how things looks.". Bottom line, they don't care to learn CSS. They should. Developers should know how an application should be styled. One caveat: CSS is hard. It can take years to be proficient. 
+CSS has been the ugly step-sister of the development world. Many developers say: "I'm a developer, I don't care about how things look.". They don't care to learn CSS. They should. Developers should learn CSS to know how an application should be styled and provide responsive support. One caveat: CSS is hard. It can take years to be proficient. 
 
 There have been many attempts over the years to improve the quirks of CSS. Out-of-the-box, CSS doesn't support variables, loops, or functions. Preprocessors like [Sass](http://sass-lang.com/) and [LESS](http://lesscss.org/) add useful features. [BEM](http://getbem.com/), ITCSS, SMACSS help; however, they are optional and cannot be enforced at the language or tooling level.
 
@@ -13,13 +13,21 @@ There have been many attempts over the years to improve the quirks of CSS. Out-o
 
 Christopher Chedeau, a.k.a. [vjeux](https://twitter.com/Vjeux), in his famous [CSS in JS](https://speakerdeck.com/vjeux/react-css-in-js) talk, lists some issues with CSS. A few include global namespacing, styling conflicts, and dead code. During the past few years, developers have been looking for ways to improve CSS modularity. React, with a focus on building component-based user interfaces, started the wave of CSS-in-JS libraries.
 
-So, what is CSS-in-JS? Rather than include CSS style sheets, all your CSS is written in JavaScript. There are dozens of CSS-in-JS libraries available and more are added each day. Popular libraries include: [styled-components](https://www.styled-components.com/), [glamorous](https://github.com/paypal/glamorous), [emotion](https://github.com/emotion-js/emotion), and [styled-jss](https://github.com/cssinjs/styled-jss). In this blog post, we are going to review one of the popular component-based CSS-in-JS libraries, [styled-components](https://www.styled-components.com/).
+So, what is CSS-in-JS? Rather than include CSS style sheets, all your CSS is written in JavaScript. Acording to [Radium](https://github.com/FormidableLabs/radium)’s website (another library for inline styling) the benefits of using styled components are: 
 
-# styled-components Overview
+* Scoped styles without selectors (styles are on component itself)
+* Avoids specificity conflicts (two style definitions for one element)
+* Source order independence (doesn’t rely on the order files are imported)
+* Dead code elimination (no unused classes as in CSS)
+* Highly expressive (easier to read JSX)
 
-styled-components was created by [Max Stoiber](https://twitter.com/mxstbr) and [Glen Maddern](https://twitter.com/glenmaddern) as a successor to CSS Modules and a new way of writing dynamic CSS for the "CSS folk". style-components currently has more than 150 contributors and 11.5K stars on [Github](https://github.com/styled-components/styled-components). styled-components makes components the fundamental way to build a styled user interface. This approach builds a bridge between best practices that have been applied for years — like BEM, and components. styled-components avoids potential collisions by scoping styles to the component. 
+There are dozens of CSS-in-JS libraries available and more are released each day. Popular libraries include: [styled-components](https://www.styled-components.com/), [glamorous](https://github.com/paypal/glamorous), [emotion](https://github.com/emotion-js/emotion), [radium](https://github.com/FormidableLabs/radium), and [styled-jss](https://github.com/cssinjs/styled-jss). In this blog post, we are going to review one of the popular component-based CSS-in-JS libraries, [styled-components](https://www.styled-components.com/).
 
-Styled components are created by defining function components using the ES6 template literal notation. These small components can be easily reused and tested. CSS properties can be added to the component as needed just like you would do normally using CSS. When the JavaScript code is parsed, styled-components will generate unique class names, and apply them to the CSS style sheet.
+# Overview
+
+styled-components was created by [Max Stoiber](https://twitter.com/mxstbr) and [Glen Maddern](https://twitter.com/glenmaddern) as a successor to CSS Modules and a new way of writing dynamic CSS for the "CSS folk". style-components currently has more than 150 contributors and 11.5K stars on [Github](https://github.com/styled-components/styled-components). styled-components makes components the fundamental way to build a styled user interfaces. styled-components avoids potential collisions by scoping styles to the component. This approach builds a bridge between best practices that have been applied for years — like BEM, and components.  
+
+Styled components are created by defining components using the ES6 template literal notation. These small components can be easily reused and tested. CSS properties can be added to the component as needed, just like you would do normally using CSS. When the JavaScript code is parsed, styled-components will generate unique class names, and apply them to a global CSS style sheet.
 
 ```
 const Title = styled.h1`
@@ -67,7 +75,7 @@ const Wrapper = styled.section`
   font-family: Lato, sans-serif;
 `;
 ```
-4. Now that we have our styled components created, it is now time to add them to the render function. Replace the render function with the following code. As you can see, using actual component names, versus generic element names with classes, provides a nice benefit.
+4. Now that we have our styled components created, it is now time to add them to the render function. Replace the render function with the following code. As you can see, using actual component names, versus generic element names with classes, provides a nice benefit. styled-components will give you a more semantic component hierarchy by default.
 
 ```
   render() {
@@ -81,7 +89,7 @@ const Wrapper = styled.section`
   }
 ```
 
-The code below lists all the changes listed above.
+The code below lists all code changes.
 
 ```
 import React, { Component } from 'react';
@@ -124,20 +132,112 @@ class App extends Component {
 render(<App />, document.getElementById('root'));
 ```
 
-# Extending Styles Example
+# Composing Styles Example
+
+One of my favorite features using styled-components is the ability to compose new styles from existing components. styled-components allows you to pass any component, not just DOM elements.
+
+Let's go back to StackBlitz and enhance our project.
+
+1. We want to create a new Title component which has a different color, bold font, and increased font size. Copy the Title component markup and paste it below. No changes will be displayed in the output window.
+2. Rename the Title component to `TitleBold`.
+3. Unlike the previous styled components, we want to compose the TitleBold component from the Title component. Change `styled.h1` to `styled(Title)`.
+4. Update the CSS properties. Set font-size to 2.5em, font-weight to bold, and color to red. Again, no changes will be displayed in the output window.
+5. Finally, in the render function, change Title to TitleBold. The output window should update with your new changes.
+
+```
+const TitleBold = styled(Title)`
+  font-size: 2.5em;
+  font-weight: bold;
+  color: red;
+`;
+```
 
 # Passing Properties Example
 
-# Events Example
+Since styled-components are components, it is possible to pass props to the styled component. This allows flexibility in using our components.
 
-Sass support is built into styled-components.
+Going back to our StackBlitz project, let's update our TitleBold and Wrapper components to support changing the background and color CSS properties based on a prop passed.
+
+1. Replace color with the following code in the TitleBold component.
+2. Replace background with the following code in the Wrapper component.
+
+```
+const TitleBold = styled(Title)`
+  font-size: 2.5em;
+  font-weight: bold;
+  color: ${props => props.primary ? 'black' : 'red'};
+`;
+
+const Wrapper = styled.section`
+  padding: 4em;
+  background: ${props => props.primary ? 'white' : 'papayawhip'};
+  font-family: Lato, sans-serif;
+`;
+```
+3. If `primary' is passed as a prop on Wrapper component, the background color will be set to white. If the prop is missing, the default background color will be papayawhip.
+4. If `primary' is passed as a prop on TitleBold component, the color will be set to black. If the prop is missing, the default background color will be red.
+5. Below is the render function passing primary as a prop on both components. Test adding/removing the primary prop from each component.
+
+```
+  render() {
+    return (
+      <Wrapper primary>
+        <TitleBold primary>
+          Hello World, my name is Steve Pietrek!
+        </TitleBold>
+      </Wrapper>
+    );
+  }
+```
+
+# Browser State Styles Example
+
+styled-components integrates many Sass features such as nested rules and browser state styles. A common requirement is to change the state of a component when hovered.
+
+1. In our StackBlitz project, find the TitleBold component.
+2. We want to add a black text shadow with a size of 2px on the text in TitleBold.
+3. Update the TitleBold component to include the following hover statement.
+
+```
+const TitleBold = styled(Title)`
+  font-size: 2.5em;
+  font-weight: bold;
+  color: ${props => props.primary ? 'black' : 'red'};
+  &:hover { text-shadow: 2px 2px black; }
+`;
+```
 
 # Media Query Example
 
+In the age of responsive design, it is important your components be responsive. styled-components allow you to define media templates.
+
+1. In our StackBlitz project, find the TitleBold component.
+2. We want to reduce the size of the text to 1.5em and set the font weight to normal if the screen's width drops below 400px.
+3. Update the TitleBold component to include the following media query.
+
+```
+const TitleBold = styled(Title)`
+  font-size: 2.5em;
+  font-weight: bold;
+  color: ${props => props.primary ? 'black' : 'red'};
+  &:hover { text-shadow: 2px 2px black; }
+  @media (max-width: 400px) {
+    font-size: 1.5em;
+    font-weight: normal;
+  }
+`;
+```
+
 # Tooling
 
-https://polished.js.org/docs/
+Although you can use styled-components with no tooling, there are a handful of tools available to help the developer experience.
 
-Furthermore, styled-components can be used with TypeScript or Flow.
+1. [Visual Studio Code](https://code.visualstudio.com/) is a new type of tool that combines the simplicity of a code editor with what developers need for their core edit-build-debug cycle. Code provides comprehensive editing and debugging support, an extensibility model, and lightweight integration with existing tools. Atom and WebStorm also have support for CSS-in-JS and styled-components.
+2. [stylelint](http://stylelint.io/) - Lint your styled components with stylelint.
+3. Visual Studio support extensions and two I use for development using styled-components include:
+   - [CSS-in-JS](https://marketplace.visualstudio.com/items?itemName=paulmolluzzo.convert-css-in-js) - Provides CSS in JS autocompletion and converts kebab-case CSS to camelCase CSS and vice versa.
+   - [vscode-styled-components](https://marketplace.visualstudio.com/items?itemName=jpoissonnier.vscode-styled-components) - Syntax highlighting for styled-components.
+   - [stylelink](https://marketplace.visualstudio.com/items?itemName=shinnn.stylelint) - A Visual Studio Code extension to lint CSS/SCSS/Less with stylelint.
+4. [Polished](https://polished.js.org/) - A lightweight toolset writing styles in JavaScript, but also use Sass-style helper functions and mixins.
 
 [Leave Feedback](https://github.com/spietrek/Feedback/issues/new)
