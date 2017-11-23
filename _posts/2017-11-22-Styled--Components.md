@@ -5,29 +5,30 @@ title: Introduction to styled-components
 
 ![styled-components Evolution](../images/styled-components-evolution.png "styled-components Evolution")
 
-CSS has been the ugly step-sister of the development world. Many developers say: "I'm a developer, I don't care about how things look.". They don't care to learn CSS. They should. Developers should learn CSS to know how an application should be styled and provide responsive support. One caveat: CSS is hard. It can take years to be proficient. 
+CSS has been the ugly step-sister of the development world. Many developers say: "I'm a developer, I don't care how things look!". Bottom line, since they don't care about how things look, they don't care to learn CSS. They should. Developers should learn CSS to know how an application should be styled and provide responsive support. One caveat: CSS is hard. It can take years to be proficient. 
 
-There have been many attempts over the years to improve the quirks of CSS. Out-of-the-box, CSS doesn't support variables, loops, or functions. Preprocessors like [Sass](http://sass-lang.com/) and [LESS](http://lesscss.org/) add useful features. [BEM](http://getbem.com/), ITCSS, SMACSS help; however, they are optional and cannot be enforced at the language or tooling level.
+There have been many attempts over the years to improve the quirks of CSS. Out-of-the-box, CSS doesn't support variables, loops, or functions. Preprocessors like [Sass](http://sass-lang.com/) and [LESS](http://lesscss.org/) add useful features. [BEM](http://getbem.com/), ITCSS, SMACSS help also; however, they are optional and cannot be enforced at the language or tooling level.
 
 # CSS-in-JS
 
-Christopher Chedeau, a.k.a. [vjeux](https://twitter.com/Vjeux), in his famous [CSS in JS](https://speakerdeck.com/vjeux/react-css-in-js) talk, lists some issues with CSS. A few include global namespacing, styling conflicts, and dead code. During the past few years, developers have been looking for ways to improve CSS modularity. React, with a focus on building component-based user interfaces, started the wave of CSS-in-JS libraries.
+Christopher Chedeau, a.k.a. [vjeux](https://twitter.com/Vjeux), in his famous [CSS in JS](https://speakerdeck.com/vjeux/react-css-in-js) talk, lists some issues with CSS. A few issues include global namespacing, styling conflicts, and dead code. During the past few years, developers have been looking for ways to improve CSS modularity. React, with a focus on building component-based user interfaces, started the wave of CSS-in-JS libraries.
 
-So, what is CSS-in-JS? Rather than include CSS style sheets, all your CSS is written in JavaScript. Acording to [Radium](https://github.com/FormidableLabs/radium)’s website (another library for inline styling) the benefits of using styled components are: 
+So, what is CSS-in-JS? Rather than include CSS style sheets, all your CSS is written in JavaScript. According to [Radium](https://github.com/FormidableLabs/radium)’s website (another library for inline component styling) the benefits of using inline component styling are: 
 
-* Scoped styles without selectors (styles are on component itself)
-* Avoids specificity conflicts (two style definitions for one element)
-* Source order independence (doesn’t rely on the order files are imported)
-* Dead code elimination (no unused classes as in CSS)
-* Highly expressive (easier to read JSX)
+* Scoped styles without selectors. CSS has just one global namespace which may cause collisions in large applications. Unique class names are created to avoid collisions.
+* Avoids specificity conflicts. Two style definitions for one element can be used.
+* Source order independence. No need to worry about how the order of files is imported.
+* Dead code elimination. Linters will show unused components so they can be removed if not used.
+* Vendor prefixing. Adds vendor prefixes only for the required browser.
+* Highly expressive which makes reading JSX easier.
 
-There are dozens of CSS-in-JS libraries available and more are released each day. Popular libraries include: [styled-components](https://www.styled-components.com/), [glamorous](https://github.com/paypal/glamorous), [emotion](https://github.com/emotion-js/emotion), [radium](https://github.com/FormidableLabs/radium), and [styled-jss](https://github.com/cssinjs/styled-jss). In this blog post, we are going to review one of the popular component-based CSS-in-JS libraries, [styled-components](https://www.styled-components.com/).
+There are dozens of CSS-in-JS libraries available and more are released each week. Popular libraries include: [styled-components](https://www.styled-components.com/), [glamorous](https://github.com/paypal/glamorous), [emotion](https://github.com/emotion-js/emotion), [radium](https://github.com/FormidableLabs/radium), and [styled-jss](https://github.com/cssinjs/styled-jss). In this blog post, we are going to review one of the popular component-based CSS-in-JS libraries, [styled-components](https://www.styled-components.com/).
 
 # Overview
 
-styled-components was created by [Max Stoiber](https://twitter.com/mxstbr) and [Glen Maddern](https://twitter.com/glenmaddern) as a successor to CSS Modules and a new way of writing dynamic CSS for the "CSS folk". style-components currently has more than 150 contributors and 11.5K stars on [Github](https://github.com/styled-components/styled-components). styled-components makes components the fundamental way to build a styled user interfaces. styled-components avoids potential collisions by scoping styles to the component. This approach builds a bridge between best practices that have been applied for years — like BEM, and components.  
+styled-components was created by [Max Stoiber](https://twitter.com/mxstbr) and [Glen Maddern](https://twitter.com/glenmaddern) as a successor to CSS Modules and a new way of writing dynamic CSS for the "CSS folk". style-components currently has more than 150 contributors and 11.5K stars on [Github](https://github.com/styled-components/styled-components). styled-components makes components the fundamental way to build a styled user interfaces. styled-components avoids potential collisions by scoping styles to the component. This approach builds a bridge between best practices that have been applied for years  —  like BEM — and components.  
 
-Styled components are created by defining components using the ES6 template literal notation. These small components can be easily reused and tested. CSS properties can be added to the component as needed, just like you would do normally using CSS. When the JavaScript code is parsed, styled-components will generate unique class names, and apply them to a global CSS style sheet.
+styled-components are created by defining components using the ES6 template literal notation. CSS properties can be added to the component as needed, just like you would do normally using CSS. style-components is just CSS so it supports media queries, pseudo-selectors, and nesting. These small components can be easily reused and tested. When the JavaScript code is parsed, styled-components will generate unique class names, and inject the CSS into the DOM.
 
 ```
 const Title = styled.h1`
@@ -192,7 +193,7 @@ const Wrapper = styled.section`
 
 # Browser State Styles Example
 
-styled-components integrates many Sass features such as nested rules and browser state styles. A common requirement is to change the state of a component when hovered.
+styled-components integrates many Sass features such as nested rules and browser state styles (e.g. hover, active, focus). A common requirement is to change the state of a component when hovered.
 
 1. In our StackBlitz project, find the TitleBold component.
 2. We want to add a black text shadow with a size of 2px on the text in TitleBold.
@@ -230,14 +231,19 @@ const TitleBold = styled(Title)`
 
 # Tooling
 
-Although you can use styled-components with no tooling, there are a handful of tools available to help the developer experience.
+Although you can use styled-components with no tooling, there are tools available to improve the developer experience.
 
 1. [Visual Studio Code](https://code.visualstudio.com/) is a new type of tool that combines the simplicity of a code editor with what developers need for their core edit-build-debug cycle. Code provides comprehensive editing and debugging support, an extensibility model, and lightweight integration with existing tools. Atom and WebStorm also have support for CSS-in-JS and styled-components.
 2. [stylelint](http://stylelint.io/) - Lint your styled components with stylelint.
 3. Visual Studio support extensions and two I use for development using styled-components include:
    - [CSS-in-JS](https://marketplace.visualstudio.com/items?itemName=paulmolluzzo.convert-css-in-js) - Provides CSS in JS autocompletion and converts kebab-case CSS to camelCase CSS and vice versa.
    - [vscode-styled-components](https://marketplace.visualstudio.com/items?itemName=jpoissonnier.vscode-styled-components) - Syntax highlighting for styled-components.
-   - [stylelink](https://marketplace.visualstudio.com/items?itemName=shinnn.stylelint) - A Visual Studio Code extension to lint CSS/SCSS/Less with stylelint.
+   - [stylelint](https://marketplace.visualstudio.com/items?itemName=shinnn.stylelint) - A Visual Studio Code extension to lint CSS/SCSS/Less with stylelint.
 4. [Polished](https://polished.js.org/) - A lightweight toolset writing styles in JavaScript, but also use Sass-style helper functions and mixins.
+5. [styled-components Ecosystem](https://www.styled-components.com/ecosystem) - Numerous links for components, grid systems, helpers, testing, and further reading articles/videos.
+
+# Summary
+
+Regardless which CSS-in-JS library you choose, inline styling of components offers lots of great features and should be considered when building out React user interfaces. Using [styled-components](https://www.styled-components.com/) in your React applications will allow your JSX to be easier to read and your styling will become easier to manage. You will also gain the power of being able to tie a components state directly to its styling, all from within the component itself. We covered some of the important features in this blog post; however, styled-components has much more available. Please review their [documentation](https://www.styled-components.com/docs) for additional information.
 
 [Leave Feedback](https://github.com/spietrek/Feedback/issues/new)
