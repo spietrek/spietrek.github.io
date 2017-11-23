@@ -55,7 +55,7 @@ yarn install styled-components
 
 # Simple Example
 
-For the sake of simplicity, we will be using [StackBlitz](https://stackblitz.com/) to walk through the examples. StackBlitz is an online VS Code IDE for Angular and React.
+For the sake of simplicity, we will be using [StackBlitz](https://stackblitz.com/) to walk through the examples. StackBlitz is an online VS Code IDE for Angular and React. [Link](https://stackblitz.com/edit/react-ew1wzv) to all examples.
 
 Navigate to [StackBlitz](https://stackblitz.com/) and start a new project using React ES6.
 
@@ -90,7 +90,7 @@ const Wrapper = styled.section`
   }
 ```
 
-The code below lists all code changes.
+The code below lists all code changes for this example.
 
 ```
 import React, { Component } from 'react';
