@@ -3,11 +3,11 @@ layout: post
 title: Introduction to styled-components
 ---
 
-![styled-components Evolution](../images/styled-components-evolution.png "styled-components Evolution")
+![styled-components Evolution](../images/styled-components-evolution.jpg "styled-components Evolution")
 
 CSS has been the ugly step-sister of the development world. Many developers say: "I'm a developer, I don't care how things look!". Bottom line, since they don't care about how things look, they don't care to learn CSS. They should. Developers should learn CSS to know how an application should be styled and provide responsive support. One caveat: CSS is hard. It can take years to be proficient. 
 
-There have been many attempts over the years to improve the quirks of CSS. Out-of-the-box, CSS doesn't support variables, loops, or functions. Preprocessors like [Sass](http://sass-lang.com/) and [LESS](http://lesscss.org/) add useful features. [BEM](http://getbem.com/), ITCSS, SMACSS also help; however, they are optional and cannot be enforced at the language or tooling level.
+There have been many attempts over the years to improve the quirks of CSS. Out-of-the-box, CSS doesn't support variables (custom properties have been introduced in newer browsers), loops, or functions. Preprocessors like [Sass](http://sass-lang.com/) and [LESS](http://lesscss.org/) add useful features. [BEM](http://getbem.com/), ITCSS, SMACSS also help; however, they are optional and cannot be enforced at the language or tooling level.
 
 # CSS-in-JS
 
@@ -26,7 +26,7 @@ There are dozens of CSS-in-JS libraries available and more are released each wee
 
 # Overview
 
-styled-components was created by [Max Stoiber](https://twitter.com/mxstbr) and [Glen Maddern](https://twitter.com/glenmaddern) as a successor to CSS Modules and a new way of writing dynamic CSS for the "CSS folk". style-components currently has more than 150 contributors and 11.5K stars on [Github](https://github.com/styled-components/styled-components). styled-components makes components the fundamental way to build a styled user interfaces. styled-components avoids potential collisions by scoping styles to the component. This approach builds a bridge between best practices that have been applied for years  —  like BEM — and components.  
+styled-components was created by [Max Stoiber](https://twitter.com/mxstbr) and [Glen Maddern](https://twitter.com/glenmaddern) as a successor to CSS Modules and a new way of writing dynamic CSS for the "CSS folk." style-components currently has more than 150 contributors and 11.5K stars on [Github](https://github.com/styled-components/styled-components). styled-components makes components the fundamental way to build a styled user interface. styled-components avoids potential collisions by scoping styles to the component. This approach builds a bridge between best practices that have been applied for years  —  like BEM — and components.  
 
 styled-components are created by defining components using the ES6 template literal notation. CSS properties can be added to the component as needed, just like you would do normally using CSS. styled-components is just CSS, so it supports media queries, pseudo-selectors, and nesting. These small components can be easily reused and tested. When the JavaScript code is parsed, styled-components will generate unique class names, and inject the CSS into the DOM.
 
@@ -61,7 +61,7 @@ For the sake of simplicity, we will be using [StackBlitz](https://stackblitz.com
 Navigate to [StackBlitz](https://stackblitz.com/) and start a new project using React ES6.
 
 1. Add the styled-components library to your project. Expand Dependencies, type in ```styled-components```, and hit the Enter key.
-2. Import styled-components by adding ```import styled from 'styled-components'``` to the top of file.
+2. Import styled-components by adding ```import styled from 'styled-components'``` to the top of the file.
 3. Add the following code above the class definition. In the code below, two styles are created. Wrapper is a section and Title is a h1.
 
 ```
@@ -245,6 +245,6 @@ Although you can use styled-components with no tooling, there are tools availabl
 
 # Summary
 
-Regardless which CSS-in-JS library you choose, inline styling of components offers lots of great features and should be considered when building out React user interfaces. Using [styled-components](https://www.styled-components.com/) in your React applications will allow your JSX to be easier to read and your styling will become easier to manage. You will also gain the power of being able to tie a components state directly to its styling, all from within the component itself. We covered some of the important features in this blog post; however, styled-components has much more available. Please review their [documentation](https://www.styled-components.com/docs) for additional information.
+Regardless of which CSS-in-JS library you choose, inline styling of components offers lots of great features and should be considered when building out React user interfaces. Using [styled-components](https://www.styled-components.com/) in your React applications will allow your JSX to be easier to read and your styling will become easier to manage. You will also gain the power of being able to tie a component's state directly to its styling, all from within the component itself. We covered some of the important features in this blog post; however, styled-components has much more available. Please review their [documentation](https://www.styled-components.com/docs) for additional information.
 
 [Leave Feedback](https://github.com/spietrek/Feedback/issues/new)
