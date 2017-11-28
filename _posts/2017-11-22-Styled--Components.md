@@ -37,6 +37,7 @@ const Title = styled.h1`
   color: palevioletred;
 `;
 ```
+
 ![What actually happens when you create a styled component and render it?](../images/how-styled-components-works.png "What actually happens when you create a styled component and render it?")
 
 # Installation
