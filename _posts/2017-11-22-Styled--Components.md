@@ -316,26 +316,26 @@ const TitleBold = styled(Title)`
 Although you can use styled-components with no tooling, there are tools
 available to improve the developer experience.
 
-1. [Visual Studio Code](https://code.visualstudio.com/) is a new type of tool
+* [Visual Studio Code](https://code.visualstudio.com/) is a new type of tool
    that combines the simplicity of a code editor with what developers need for
    their core edit-build-debug cycle. Code provides comprehensive editing and
    debugging support, an extensibility model, and lightweight integration with
    existing tools. Atom and WebStorm also have support for CSS-in-JS and
    styled-components.
-1. [stylelint](http://stylelint.io/) - Lint your styled components with
+* [stylelint](http://stylelint.io/) - Lint your styled components with
    stylelint.
-1. Visual Studio support extensions and two I use for development using
+* Visual Studio support extensions and two I use for development using
    styled-components include:
-   * [CSS-in-JS](https://marketplace.visualstudio.com/items?itemName=paulmolluzzo.convert-css-in-js) -
+  * [CSS-in-JS](https://marketplace.visualstudio.com/items?itemName=paulmolluzzo.convert-css-in-js) -
      Provides CSS in JS autocompletion and converts kebab-case CSS to camelCase
      CSS and vice versa.
-   * [vscode-styled-components](https://marketplace.visualstudio.com/items?itemName=jpoissonnier.vscode-styled-components) -
+  * [vscode-styled-components](https://marketplace.visualstudio.com/items?itemName=jpoissonnier.vscode-styled-components) -
      Syntax highlighting for styled-components.
-   * [stylelint](https://marketplace.visualstudio.com/items?itemName=shinnn.stylelint) -
+  * [stylelint](https://marketplace.visualstudio.com/items?itemName=shinnn.stylelint) -
      A Visual Studio Code extension to lint CSS/SCSS/Less with stylelint.
-1. [Polished](https://polished.js.org/) - A lightweight toolset writing styles
+* [Polished](https://polished.js.org/) - A lightweight toolset writing styles
    in JavaScript, but also use Sass-style helper functions and mixins.
-1. [styled-components Ecosystem](https://www.styled-components.com/ecosystem) -
+* [styled-components Ecosystem](https://www.styled-components.com/ecosystem) -
    Numerous links for components, grid systems, helpers, testing, and further
    reading articles/videos.
 
