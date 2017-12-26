@@ -3,13 +3,13 @@ layout: post
 title: Introduction to styled-components
 ---
 
-![styled-components Evolution](../images/styled-components-evolution.jpg "styled-components Evolution")
+![styled-components Evolution](../images/styled-components-evolution.svg "styled-components Evolution")
 
 CSS has been the ugly step-sister of the development world. Many developers say:
 "I'm a developer, I don't care how things look!". Bottom line, since they don't
 care about how things look, they don't care to learn CSS. They should.
 Developers should learn CSS to know how an application should be styled and
-provide responsive support. One caveat: CSS is hard. It can take years to be
+provide responsive and accessibility support. One caveat: CSS is hard. It can take years to be
 proficient.
 
 There have been many attempts over the years to improve the quirks of CSS.
@@ -65,8 +65,7 @@ currently has more than 150 contributors and 11.5K stars on
 [Github](https://github.com/styled-components/styled-components).
 styled-components makes components the fundamental way to build a styled user
 interface. styled-components avoids potential collisions by scoping styles to
-the component. This approach builds a bridge between best practices that have
-been applied for years — like BEM — and components.
+the component.
 
 styled-components are created by defining components using the ES6 template
 literal notation. CSS properties can be added to the component as needed, just
