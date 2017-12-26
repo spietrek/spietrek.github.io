@@ -7,11 +7,11 @@ title: My Path to Visual Studio Code
 
 Over my career, I have been a developer IDE/Editor snob. I am always looking for the latest and greatest tools to use.
 
-I started my development career using [Borland Delphi](https://www.embarcadero.com/products/delphi). When I started at my current [employer](https://www.cardinalsolutions.com/), I was a SharePoint developer, so I used [Visual Studio](https://www.visualstudio.com). Visual Studio was nice; however, I fell in love with [ReSharper](https://www.jetbrains.com/resharper/) as it did a great job pointing out mistakes in my code. Both IDE's were nice; however, there was not much configuration and personalization availble. They also had many features that I never used.
+I started my development career using [Borland Delphi](https://www.embarcadero.com/products/delphi). When I started at my current [employer](https://www.cardinalsolutions.com/), I was a SharePoint developer, so I used [Visual Studio](https://www.visualstudio.com). Visual Studio was nice; however, I fell in love with [ReSharper](https://www.jetbrains.com/resharper/) as it did a great job pointing out mistakes and recommending improvements in my code. Both IDE's were nice; however, they contained many features I never touched and didn't provide much personalization.
 
-During the past 5 years, I have transitioned to more of a front end developer which has opened the opportunities to use alternative development environments. Unlike huge IDE's like Visual Studio, these light-weight editors provided great performance and allowed me to focus on the features I needed. If a feature was unavailable, extensions could be added to provide the additional functionality.
+During the past 5 years, I have transitioned to more of a front end developer which has opened the opportunities to use alternative development environments. Unlike full IDE's, like Visual Studio, these light-weight editors provided great performance and allowed me to focus on the features I needed. If a feature was unavailable, extensions could be added to provide the additional functionality.
 
-Although closer to an IDE, I started off using [WebStorm](https://www.jetbrains.com/webstorm/) and really enjoyed it until a new version came out which caused some DPI scaling issues with my Surface Pro. They quickly released a fix; however, I was already looking for alternatives. I quickly found [Brackets](http://brackets.io/) which I enjoyed using for a period of time. What I loved about Brackets was the ability to add extensions to the editor. Beautify, Autoprefixer, Minifier, Brackets Gits, Emmet, and Live Reload opened my eyes to using extensions to provide a great developer UX and provide personalization. [Atom](https://atom.io/) was soon released and I made another editor move. Atom's extension ecosystem was huge and I found many extensions and themes to use. There was also an increase in editor plugins focused on a specific technology (e.g. React and React Native).
+Although closer to an IDE, I started off using [WebStorm](https://www.jetbrains.com/webstorm/) and really enjoyed it until a new version came out which caused some DPI scaling issues with my Surface Pro. JetBrains quickly released a fix; however, I was already looking for alternatives as I wanted something smaller. I quickly found [Brackets](http://brackets.io/) which I enjoyed using for a period of time. What I loved about Brackets was the ability to add extensions to the editor. Beautify, Autoprefixer, Minifier, Brackets Gits, Emmet, and Live Reload opened my eyes to using extensions to provide a great developer UX and provide personalization. [Atom](https://atom.io/) was soon released and I made another editor move. Atom's extension ecosystem was huge and I found many extensions and themes to use. There was also an increase in editor plugins focused on a specific technology (e.g. React and React Native).
 
 # VS Code
 
@@ -19,7 +19,7 @@ Although closer to an IDE, I started off using [WebStorm](https://www.jetbrains.
 
 # My Favorite Extensions and Themes
 
-I have been using VS Code for over a year (an eternity for me). I use the Insider's Build which provides new functionality quicker; however, there may be an occassional glitch. Below is a list of extensions, plugins, and themes I have installed.
+I kicked the tires with VS Code when it was first released; however, I didn't fully commit to it as my main editor until the extensions were available. I have been using VS Code for over a year (an eternity for me) and would be hard-pressed to switch at this point. It provides great performance and the extension ecosystem is huge. I use the Insider's Build which provides new functionality quicker; however, there may be an occassional glitch. Below is a list of extensions, plugins, and themes I have installed.
 
 ## Extensions
 
@@ -47,7 +47,7 @@ Below is a list of my favorite VS Code extensions.
 * [Prettier](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode) - Love, love, love [Prettier](https://www.twitter.com/prettiercode)
 * [React Native Tools](https://marketplace.visualstudio.com/items?itemName=vsmobile.vscode-react-native)
 * [Reactjs code snippets](https://marketplace.visualstudio.com/items?itemName=xabikos.ReactSnippets)
-* [Settings Sync](https://marketplace.visualstudio.com/items?itemName=Shan.code-settings-sync) - Must extension for synching between different environments
+* [Settings Sync](https://marketplace.visualstudio.com/items?itemName=Shan.code-settings-sync) - Must extension for syncing between different environments
 * [Sort](https://marketplace.visualstudio.com/items?itemName=henriiik.vscode-sort)
 * [stylelint](https://marketplace.visualstudio.com/items?itemName=shinnn.stylelint)
 * [TSLint](https://marketplace.visualstudio.com/items?itemName=eg2.tslint)
@@ -64,12 +64,12 @@ Below is a list of my favorite VS Code themes.
 
 # Summary
 
-Regardless of which IDE or editor you use for development, there are plenty of great options available. 
+Regardless of which IDE or editor you use for development, there are plenty of great options available.
 
 Who knows, with how far online editors have come, (e.g. [StackBlitz](https://stackblitz.com/) and [CodeSandbox](https://codesandbox.io/)), we may all be developing entirely online soon.
 
 ![CodeSandbox](../images/codesandbox.png "CodeSandbox")
 
-Hmm. A great feature to would be integration between your editor and an online editor.
+*Hmm. A great feature to would be integration between your editor and an online editor.*
 
 [Leave Feedback](https://github.com/spietrek/Feedback/issues/new)
