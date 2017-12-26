@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Visual Studio Code Setup
+title: My Path to Visual Studio Code
 ---
 
 ![VS Code](../images/vscode.png "VS Code")
