@@ -64,8 +64,12 @@ Below is a list of my favorite VS Code themes.
 
 # Summary
 
-Regardless of which IDE or editor you use for development, there are plenty of great options available. Who knows, with how far online editors have come, (e.g. [StackBlitz](https://stackblitz.com/) and [CodeSandbox](https://codesandbox.io/)), we may all be developing entirely online soon.
+Regardless of which IDE or editor you use for development, there are plenty of great options available. 
 
-Hmm. A great feature to have would be for integration between your Editor and an online editor.
+Who knows, with how far online editors have come, (e.g. [StackBlitz](https://stackblitz.com/) and [CodeSandbox](https://codesandbox.io/)), we may all be developing entirely online soon.
+
+![CodeSandbox](../images/codesandbox.png "CodeSandbox")
+
+Hmm. A great feature to would be integration between your editor and an online editor.
 
 [Leave Feedback](https://github.com/spietrek/Feedback/issues/new)
