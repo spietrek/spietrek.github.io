@@ -3,7 +3,7 @@ layout: post
 title: Introduction to styled-components
 ---
 
-![styled-components Evolution](../images/styled-components-evolution.svg "styled-components Evolution")
+![styled-components Evolution](../images/styled-components-evolution.png "styled-components Evolution")
 
 CSS has been the ugly step-sister of the development world. Many developers say:
 "I'm a developer, I don't care how things look!". Bottom line, since they don't
